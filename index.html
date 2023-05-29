@@ -10,153 +10,312 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="images/logo.png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Su IPS</title>
   </head>
 
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="images/logo.png" class="logo1" alt="Logo de Su IPS S.A.S" />
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" class="logo1" alt="Logo de Su IPS S.A.S" />
+        </div>
+        <div class="textocabecera">
+          <h2>Su IPS</h2>
+          <h3>Institucion prestadora de servicios de salud</h3>
+        </div>
+        <div>
+          <nav>
+            <ul class="navegacionheader">
+              <li><a href="index.html">INICIO</a></li>
+              <li><a href="https://suipsdagua.com/acerca-de/">NOSOTROS</a></li>
+              <li><a href="">CONTACTO</a></li>
+              <li><a href="https://suipsdagua.com/contacto/">PQRS</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="textocabecera">
-        <h2>Su IPS</h2>
-        <h3>Institucion prestadora de servicios de salud</h3>
-      </div>
-      <div>
-        <nav>
-          <ul class="navegacionheader">
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="https://suipsdagua.com/acerca-de/">NOSOTROS</a></li>
-            <li><a href="">CONTACTO</a></li>
-            <li><a href="https://suipsdagua.com/contacto/">PQRS</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <section id="hero">
-    <h1>Cuidamos de tu salud</h1>
-    <a href="https://wa.me/573004631909?/?text=Deseo%20solicitar%20una20%cita">
-      <button>Agenda tu cita con nosotros</button>
-    </a>
-  </section>
+    <section id="hero">
+      <h1>Cuidamos de tu salud</h1>
+      <a
+        href="https://wa.me/573004631909?/?text=Deseo%20solicitar%20una20%cita"
+      >
+        <button id="pedir-cita">Agenda tu cita con nosotros</button>
+      </a>
+    </section>
 
-  <section id="conociendonos">
-    <div class="container">
-      <h3>
-        En <span class="color-acento">Su IPS </span>nos preocupamos por su
-        salud, por eso ponemos a su disposición una variada oferta de programas
-        orientados a la prevención y tratamiento de enfermedades.
-      </h3>
+    <section id="conociendonos">
+      <div class="container">
+        <h3>
+          En <span class="color-acento">Su IPS </span>nos preocupamos por su
+          salud, por eso ponemos a su disposición una variada oferta de
+          programas orientados a la prevención y tratamiento de enfermedades.
+        </h3>
 
-      <div class="image-container">
-        <img src="images/Info.png" alt="Vector del parrafo de descripcion" />
+        <div class="image-container">
+          <img src="images/Info.png" alt="Vector del parrafo de descripcion" />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="servicios">
-    <div class="container">
-      <h2>Conoce nuestros servicios</h2>
-      <div class="cartaservicio">
-        <h3>✱ Medicina general</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Enfermería</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Odontología general</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Toma de muestras de laboratorio clínico</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Laboratorio clínico</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Psicología</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Programas de detección temprana</h3>
-      </div>
-      <div class="cartaservicio">
-        <h3>✱ Programas de protección específica</h3>
-      </div>
-    </div>
-  </section>
-
-  <section id="sedes">
-    <div class="container">
-      <div class="nuestrassedes">
-        <h2>SEDE DAGUA</h2>
-        <div class="logosede1">
-          <a href="https://www.facebook.com/xsleepybwbx">
-            <img src="images/logoDAGUA.png" alt="Vector de la sede dagua" />
-          </a>
-          <div class="gmap_canvas">
-            <iframe
-              width="250"
-              height="250"
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?q=3%C2%B039%2722.4%22N+76%C2%B041%2709.0%22W&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe
-            ><a href="https://online.stopwatch-timer.net/"></a><br /><style>
-              .mapouter {
-                position: relative;
-                text-align: right;
-              }</style
-            ><a href="https://www.embedmaps.co">embed google maps api</a
-            ><style>
-              .gmap_canvas {
-                overflow: hidden;
-                background: none !important;
-              }
-            </style>
+    <section id="servicios">
+      <div class="container">
+        <h2>Conoce nuestros servicios</h2>
+        <div class="cartaservicio">
+          <nav class="servicios-nav">
+            <ul class="tabs">
+              <li>
+                <a href="#tab1"><span>Medicina general</span></a>
+              </li>
+              <li>
+                <a href="#tab2"><span>Enfermería</span></a>
+              </li>
+              <li>
+                <a href="#tab3"><span>Odontología general</span></a>
+              </li>
+              <li>
+                <a href="#tab4"><span>Laboratorio clínico</span></a>
+              </li>
+              <li>
+                <a href="#tab5"><span>Psicología</span></a>
+              </li>
+              <li>
+                <a href="#tab6"
+                  ><span>Programas de detección temprana</span>
+                </a>
+              </li>
+              <li>
+                <a href="#tab7"
+                  ><span>Programas de protección específica</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="descripcion-servicio">
+            <article id="tab1">
+              <p>
+                El servicio de medicina general es una rama de la medicina que
+                se enfoca en la atención primaria y el cuidado de la salud
+                general de las personas. Los médicos especializados en medicina
+                general, conocidos como médicos de cabecera o médicos de
+                familia, son los encargados de brindar este tipo de atención.<br /><br />El
+                objetivo principal de la medicina general es mantener y promover
+                la salud en general, así como prevenir enfermedades. Los médicos
+                generales están capacitados para tratar una amplia variedad de
+                problemas de salud y a menudo son el primer punto de contacto
+                para las personas que buscan atención médica. <br /><br />Cuando
+                acudes a un médico general, este realiza un examen completo de
+                tu estado de salud, incluyendo la evaluación de tus síntomas,
+                antecedentes médicos y factores de riesgo. También pueden
+                realizar pruebas de diagnóstico y, en función de los resultados,
+                ofrecer tratamiento o derivarte a un especialista si es
+                necesario.
+              </p>
+            </article>
+            <article id="tab2">
+              <p>
+                El servicio de enfermería es un componente fundamental en el
+                campo de la atención médica. Los enfermeros y enfermeras son
+                profesionales de la salud que se dedican a cuidar, asistir y
+                promover el bienestar de los pacientes.<br /><br />La enfermería
+                abarca una amplia gama de roles y responsabilidades. Los
+                enfermeros pueden trabajar en hospitales, clínicas, consultorios
+                médicos, hogares de ancianos, escuelas y otros entornos de
+                atención médica. Su objetivo principal es brindar atención
+                integral a los pacientes, tanto física como emocionalmente.<br /><br />Los
+                enfermeros están capacitados para llevar a cabo una variedad de
+                tareas importantes. Pueden realizar evaluaciones de salud, tomar
+                signos vitales, administrar medicamentos, realizar curaciones de
+                heridas, supervisar el estado de los pacientes y coordinar la
+                atención con otros profesionales de la salud. También brindan
+                apoyo emocional a los pacientes y sus familias, proporcionando
+                educación y orientación sobre el cuidado de la salud.
+              </p>
+            </article>
+            <article id="tab3">
+              <p>
+                El servicio de odontología general es la rama de la odontología
+                que se centra en el cuidado de la salud bucal en general. Los
+                odontólogos generales, también conocidos como dentistas
+                generales, son los profesionales encargados de brindar este tipo
+                de atención.<br /><br />El objetivo principal de la odontología
+                general es mantener la salud bucal, prevenir enfermedades
+                dentales y tratar problemas comunes de los dientes y las encías.
+                Los odontólogos generales son expertos en el diagnóstico,
+                tratamiento y seguimiento de diversas condiciones dentales.<br /><br />
+                Cuando acudes a un odontólogo general, este realizará una
+                evaluación completa de tu salud bucal. Esto puede incluir un
+                examen dental, radiografías, limpieza dental y evaluación de tus
+                hábitos de higiene oral. También podrán identificar y tratar
+                problemas dentales comunes, como caries, enfermedad de las
+                encías, infecciones bucales y maloclusiones.
+              </p>
+            </article>
+            <article id="tab4">
+              <p>
+                El servicio de laboratorio clínico es una parte fundamental de
+                la atención médica que se encarga de realizar pruebas y análisis
+                de muestras biológicas para ayudar en el diagnóstico, monitoreo
+                y tratamiento de enfermedades. Los laboratorios clínicos son los
+                lugares donde se llevan a cabo estas pruebas. <br /><br />Cuando
+                un médico necesita obtener más información sobre la salud de un
+                paciente, puede solicitar diferentes tipos de pruebas de
+                laboratorio clínico. Estas pruebas se realizan en muestras
+                biológicas como sangre, orina, saliva, heces y tejidos, y
+                proporcionan información valiosa sobre el funcionamiento del
+                cuerpo. <br /><br />En el laboratorio clínico, personal
+                especializado, como técnicos de laboratorio y científicos,
+                procesa y analiza las muestras. Utilizan tecnología y equipos
+                avanzados para llevar a cabo una amplia gama de pruebas, como
+                análisis de sangre completo, perfiles metabólicos, pruebas de
+                función hepática y renal, pruebas de detección de enfermedades
+                infecciosas, análisis de lípidos, entre otras.
+              </p>
+            </article>
+            <article id="tab5">
+              <p>
+                El servicio de psicología es un área de la salud que se enfoca
+                en el estudio y la comprensión del comportamiento humano y los
+                procesos mentales. Los psicólogos son profesionales
+                especializados en esta disciplina y brindan apoyo emocional y
+                terapéutico a las personas que enfrentan dificultades
+                emocionales, mentales o de comportamiento. <br /><br />El
+                objetivo principal de la psicología es mejorar el bienestar
+                mental y emocional de las personas, así como ayudar a resolver
+                problemas y promover el crecimiento personal. Los psicólogos
+                utilizan diferentes enfoques y técnicas basadas en la evidencia
+                para comprender y tratar una amplia gama de condiciones y
+                desafíos psicológicos.<br /><br />
+                Cuando acudes a un psicólogo, este te brindará un entorno seguro
+                y confidencial para que puedas expresar tus pensamientos,
+                sentimientos y preocupaciones. A través de la conversación y la
+                escucha activa, el psicólogo te ayudará a explorar y comprender
+                mejor tus emociones, pensamientos y patrones de comportamiento.
+              </p>
+            </article>
+            <article id="tab6">
+              <p>
+                El servicio de programas de detección temprana se refiere a un
+                conjunto de estrategias y pruebas médicas diseñadas para
+                identificar enfermedades o condiciones de salud en sus etapas
+                iniciales, antes de que los síntomas se vuelvan evidentes. El
+                objetivo principal de estos programas es detectar problemas de
+                salud lo más temprano posible, cuando tienen un mayor potencial
+                de tratamiento exitoso.<br /><br />
+                Estos programas suelen centrarse en condiciones graves y
+                comunes, como el cáncer, las enfermedades cardíacas, la diabetes
+                y las enfermedades genéticas. Utilizan diferentes métodos de
+                detección, como pruebas de laboratorio, imágenes médicas,
+                exámenes físicos y cuestionarios de evaluación de riesgos.<br /><br />
+                La detección temprana es crucial porque muchas enfermedades son
+                más tratables en sus etapas iniciales. Al identificar problemas
+                de salud en sus primeras etapas, los médicos pueden intervenir
+                rápidamente y proporcionar el tratamiento adecuado. Esto puede
+                conducir a mejores resultados y aumentar las posibilidades de
+                curación o control de la enfermedad.
+              </p>
+            </article>
+            <article id="tab7">
+              <p>
+                El servicio de programas de protección específica se refiere a
+                una serie de intervenciones y estrategias diseñadas para
+                prevenir o controlar enfermedades específicas en poblaciones o
+                grupos de riesgo. Estos programas se enfocan en abordar
+                condiciones de salud específicas y reducir la incidencia y el
+                impacto de enfermedades particulares.<br /><br />
+                El objetivo principal de los programas de protección específica
+                es proteger a las personas contra enfermedades específicas o
+                factores de riesgo conocidos. Estos programas se basan en la
+                identificación de riesgos y la aplicación de medidas preventivas
+                para minimizar la probabilidad de exposición o desarrollo de una
+                enfermedad. <br /><br />Los programas de protección específica
+                pueden incluir actividades como vacunaciones, detección temprana
+                de enfermedades, programas de educación sanitaria, promoción de
+                estilos de vida saludables, uso de barreras protectoras, como
+                condones para prevenir enfermedades de transmisión sexual, y
+                control de factores de riesgo, como el acceso a agua potable y
+                saneamiento adecuado.
+              </p>
+            </article>
           </div>
         </div>
       </div>
-      <div class="nuestrassedes">
-        <h2>SEDE KM30</h2>
-        <div class="logosede2">
-          <a href="https://www.facebook.com/Juanmanuelrc13/">
-            <img src="images/logoKM30.png" alt="Vector de la sede km30" />
-          </a>
-          <div class="gmap_canvas">
-            <iframe
-              width="250"
-              height="250"
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?q=3.572279%2C+-76.644908&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe
-            ><a href="https://online.stopwatch-timer.net/"></a><br /><style>
-              .mapouter {
-                position: relative;
-                text-align: right;
-              }</style
-            ><a href="https://www.embedmaps.co">embed google maps api</a
-            ><style>
-              .gmap_canvas {
-                overflow: hidden;
-                background: none !important;
-              }
-            </style>
+    </section>
+
+    <section id="sedes">
+      <div class="container">
+        <div class="nuestrassedes">
+          <h2>SEDE DAGUA</h2>
+          <div class="logosede1">
+            <a href="https://www.facebook.com/xsleepybwbx">
+              <img src="images/logoDAGUA.png" alt="Vector de la sede dagua" />
+            </a>
+            <div class="gmap_canvas">
+              <iframe
+                width="250"
+                height="250"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=3%C2%B039%2722.4%22N+76%C2%B041%2709.0%22W&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe
+              ><a href="https://online.stopwatch-timer.net/"></a><br /><style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                }</style
+              ><a href="https://www.embedmaps.co">embed google maps api</a
+              ><style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+        <div class="nuestrassedes">
+          <h2>SEDE KM30</h2>
+          <div class="logosede2">
+            <a href="https://www.facebook.com/Juanmanuelrc13/">
+              <img src="images/logoKM30.png" alt="Vector de la sede km30" />
+            </a>
+            <div class="gmap_canvas">
+              <iframe
+                width="250"
+                height="250"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=3.572279%2C+-76.644908&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe
+              ><a href="https://online.stopwatch-timer.net/"></a><br /><style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                }</style
+              ><a href="https://www.embedmaps.co">embed google maps api</a
+              ><style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                }
+              </style>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
+    </section>
+  </body>
   <footer>
     <div class="container">
       <div class="logo-red-social">

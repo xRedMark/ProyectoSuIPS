@@ -21,12 +21,13 @@ p {
 }
 ul {
   list-style: none;
+  padding: 0;
 }
 li {
   font-size: 1.25em;
 }
 
-button {
+#pedir-cita {
   font-size: 2em;
   font-weight: bold;
   padding: 10px 20px;
@@ -38,7 +39,7 @@ button {
   transition: 0.4s;
 }
 
-button:hover {
+#pedir-cita:hover {
   background-color: rgb(29, 29, 165);
 }
 
@@ -171,24 +172,99 @@ header a:hover {
 }
 
 #servicios .container {
-  padding: 130px 0px;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+#servicios a {
+  display: flex;
+  align-items: top;
+  text-decoration: none;
+  height: 50px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: rgb(223, 222, 222);
+  transition: color 0.4s;
+}
+
+#servicios a:hover {
+  color: rgb(221, 201, 21);
+}
+
+.active {
+  background: rgb(9, 71, 182);
+  max-height: 17px;
 }
 
 #servicios .container h2 {
-  margin-bottom: 80px;
+  margin-top: 100px;
 }
 
-#servicios .container h3 {
-  margin: 0 150px;
+.servicios-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.servicios-nav li {
+  height: 50px;
+  padding: 5px;
+}
+
+.descripcion-servicio article {
+  padding: 30px;
+}
+.descripcion-servicio article p {
+  font-size: 0.9em;
+}
+@media screen and (min-width: 1024px) {
+  .descripcion-servicio article p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .descripcion-servicio article p {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #servicios a {
+    height: 200px;
+    font-size: 0.8em;
+    padding: 6px;
+    font-weight: bold;
+    color: rgb(223, 222, 222);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #servicios a {
+    height: 200px;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: bold;
+    color: rgb(223, 222, 222);
+  }
+}
+
+/* Descripcion de servicios invisibles */
+
+.hide {
+  display: none;
+  margin: 1em 5em;
   text-align: start;
-  font-size: 1.3em;
-  transition: 0.3s;
 }
 
-#servicios .container h3:hover {
-  color: rgb(223, 148, 37);
-  margin-left: 160px;
+.show {
+  display: block;
 }
+
+/* Descripcion de servicios invisibles */
 
 #sedes {
   height: 100vh;
@@ -257,7 +333,7 @@ footer .container {
   transition: 0.5s;
 }
 .logo-red-social img:hover {
- filter: contrast(10%);
+  filter: contrast(10%);
 }
 
 footer .container p {
