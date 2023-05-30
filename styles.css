@@ -392,3 +392,93 @@ footer .container p span {
     height: 10vh;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: auto;
+  }
+
+  .image.container,
+  img {
+    width: 320px;
+  }
+
+  #pedir-cita {
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+
+  #hero {
+    color: rgb(240, 240, 240);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(images/hero.png);
+    background-repeat: no-repeat;
+    background-position: 10% center;
+  }
+
+  #conociendonos {
+    font-size: 0.5em;
+  }
+
+  #servicios a {
+    font-size: 0.1em;
+  }
+
+  .cartaservicio {
+    font-size: 0.6em;
+  }
+
+  .nuestrassedes .gmap_canvas {
+    width: 50%;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: auto;
+  }
+
+  .image.container,
+  img {
+    width: 320px;
+  }
+
+  #pedir-cita {
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+
+  #hero {
+    color: rgb(240, 240, 240);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(images/hero.png);
+    background-repeat: no-repeat;
+    background-position: 10% center;
+  }
+
+  #conociendonos {
+    font-size: 0.5em;
+  }
+
+  #servicios a {
+    font-size: 0.1em;
+  }
+
+  .cartaservicio {
+    font-size: 0.6em;
+  }
+
+  .nuestrassedes .gmap_canvas {
+    width: 50%;
+    height: 10vh;
+  }
+}
