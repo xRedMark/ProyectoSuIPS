@@ -2,7 +2,10 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
   margin: 0;
   font-family: "Mukta", sans-serif;
 }
@@ -391,6 +394,9 @@ footer .container p span {
     width: 50%;
     height: 10vh;
   }
+  .titulo-sede{
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -436,6 +442,9 @@ footer .container p span {
     width: 50%;
     height: 10vh;
   }
+  .titulo-sede{
+    font-size: 1.7em;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -480,5 +489,8 @@ footer .container p span {
   .nuestrassedes .gmap_canvas {
     width: 50%;
     height: 10vh;
+  }
+  .titulo-sede{
+    font-size: 1.7em;
   }
 }
