@@ -313,6 +313,7 @@ footer .container p span {
 }
 
 /*media querry*/
+
 @media screen and (min-width: 1440px) {
   .descripcion-servicio article p {
     font-size: 1.4em;
@@ -394,7 +395,7 @@ footer .container p span {
     width: 50%;
     height: 10vh;
   }
-  .titulo-sede{
+  .titulo-sede {
     font-size: 1.5em;
   }
 }
@@ -442,7 +443,7 @@ footer .container p span {
     width: 50%;
     height: 10vh;
   }
-  .titulo-sede{
+  .titulo-sede {
     font-size: 1.7em;
   }
 }
@@ -454,7 +455,7 @@ footer .container p span {
 
   .image.container,
   img {
-    width: 320px;
+    width: auto;
   }
 
   #pedir-cita {
@@ -487,10 +488,10 @@ footer .container p span {
   }
 
   .nuestrassedes .gmap_canvas {
-    width: 50%;
-    height: 10vh;
+    width: 60%;
+    height: 13vh;
   }
-  .titulo-sede{
+  .titulo-sede {
     font-size: 1.7em;
   }
 }
