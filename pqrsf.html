@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="images/logo_tab.png" />
     <meta name="viewport" content="width=device-width" />
-    <title>Contacto</title>
+
+    <title>PQRSF</title>
 </head>
 
-<body>
+<body class="pqrs-body">
 
     <header>
         <div class="container">
@@ -37,27 +38,36 @@
         </div>
     </header>
 
-    <section id="telefonos">
-        <div class="container">
-            <h2>Conoce nuestros números de teléfono</h2>
-            <div class="telefonos_sedeDagua">
-                <h3>Servicios generales</h3>
-                <a href="https://wa.me/573004631909?/?text=Deseo%20solicitar%20una20%cita">
-                    <button id="numeroSede">Sede en Dagua: 3004631909</button>
-                </a>
-                <br>
-                <a href="https://wa.me/573004081303?/?text=Deseo%20solicitar%20una20%cita">
-                    <button id="numeroSede">Sede en KM30: 3004081303</button>
-                </a>
+    <section id="formulario">
+
+        <form action="https://formspree.io/f/xqkrqwgk" method="POST">
+
+            <h2 class="titulo-contacto">Contacto</h2>
+            <div class="input-group">
+
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Nombre">
+                <label for="phone">Teléfono</label>
+                <input type="tel" name="phone" id="phone" placeholder="Teléfono">
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" cols="40" rows="5"
+                    placeholder="Por favor, escriba su petición, queja, reclamo o felicitación aquí."></textarea>
+
+                <div class="form-txt">
+                    <a href="politica-privacidad.html">Política de privacidad</a>
+                    <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+                </div>
+
+                <input type="submit" class="btn" value="Enviar">
+
             </div>
-            <div class="telefonos_sedeDagua">
-                <h3>Odontología</h3>
-                <a href="https://wa.me/573052530766?/?text=Deseo%20solicitar%20una20%cita">
-                    <button id="numeroSede">Ambas sedes: 3052530766</button>
-                </a>
-            </div>
-        </div>
+
+        </form>
+
     </section>
+
 
     <footer class="footer">
         <div class="container">
@@ -86,5 +96,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        const $form = document.querySelector('#form')
+
+        $form.addEventListener('submit', handleSubmit)
+
+        function handleSubmit(event) {
+            event.preventDefault()
+        }
+    </script>
 
 </body>

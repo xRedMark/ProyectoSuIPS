@@ -44,64 +44,57 @@ li {
   color: rgb(9, 71, 182);
 }
 
-/* Estilos para encabezado */
+/* Fin CSS para header */
+
 header {
   background-color: white;
   color: rgb(9, 71, 182);
 }
-
-/* Estilos para contenedor en encabezado */
 header .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: auto;
+  min-width: 300px;
 }
-
-/* Estilos para lista en encabezado */
-header .container ul {
-  padding: 0;
-}
-
-/* Estilos para logo en encabezado */
 header .logo img {
   margin: 0;
   padding: 0px;
   width: 200px;
   height: 191px;
 }
-
-/* Estilos para texto de encabezado */
 header .textocabecera {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 150px;
 }
-
-/* Estilos para subtítulo en encabezado */
-header h3 {
+.textocabecera h2 {
+  font-size: 2em;
+}
+.textocabecera h3 {
+  font-size: 1.3em;
+}
+header h2,
+h3 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-size: 1.5em;
-  margin-top: -50px;
+  padding: 0;
+  margin: 0;
 }
 
-/* Estilos para menú de navegación en encabezado */
+.navegacionheader {
+  margin: 0;
+}
 header nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding-bottom: 25px;
-  width: 200px;
-  height: 200px;
+  font-size: 0.85em;
 }
-
-/* Estilos para enlaces en menú de navegación en encabezado */
 header a {
   padding: 5px 12px;
   text-decoration: none;
@@ -109,12 +102,51 @@ header a {
   color: rgb(9, 71, 182);
   transition: 0.4s;
 }
-
 header a:hover {
   color: rgb(223, 148, 37);
 }
 
-/* Estilos para sección "hero" */
+@media (min-width: 768px) {
+  header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .navegacion-img-text {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .logo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    width: 130px;
+    height: 130px;
+  }
+  header .logo img {
+    margin: 0;
+    padding: 0px;
+    width: 130px;
+    height: 130px;
+  }
+  .navegacion-nav {
+    width: 130px;
+    height: 130px;
+  }
+  .navegacion-nav nav {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* Fin CSS para header */
+
+/* Inicio CSS para #hero */
 #hero {
   display: flex;
   align-items: center;
@@ -132,6 +164,8 @@ header a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: start center;
+  margin-top: 40px;
+  min-width: 300px;
 }
 #hero h1 {
   font-size: 6em;
@@ -158,7 +192,9 @@ header a:hover {
   background-color: rgb(28, 92, 211);
 }
 
-/* Estilos para sección "Conociéndonos" */
+/* Fin CSS para #hero */
+
+/* Inicio CSS para #conociendonos */
 #conociendonos .container {
   display: flex;
   justify-content: center;
@@ -168,31 +204,22 @@ header a:hover {
   color: rgb(240, 240, 240);
   padding: 4%;
   height: 90vh;
+  min-width: 300px;
 }
 
-#conociendonos h3 {
+#conociendonos p {
   font-size: 1.7em;
   color: black;
-}
-
-#conociendonos h3 strong {
-  color: rgb(9, 71, 182);
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 .container img {
   max-width: 50vh;
   padding: 20px;
 }
+/* Fin CSS para #conociendonos */
 
-/* Estilos para sección de servicios */
-.cartaservicio {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-}
+/* Inicio CSS para sección de servicios */
 
 #servicios {
   background-color: rgb(30, 30, 30);
@@ -200,6 +227,15 @@ header a:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
+  min-width: 300px;
+}
+
+.cartaservicio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }
 
 #servicios .container {
@@ -215,7 +251,7 @@ header a:hover {
 }
 
 /* Estilos para acordeones de servicios */
-#servicios .acordeon {
+.acordeon {
   font-size: 1em;
   width: 50%;
   cursor: pointer;
@@ -228,15 +264,9 @@ header a:hover {
   background-color: rgba(9, 71, 183, 255);
   transition: 0.4s;
 }
-#sevicios .acordeon:hover {
-  font-size: 1em;
+.acordeon:hover {
   width: 60%;
-  font-weight: bold;
-  padding: 10px 20px;
   border-radius: 15px;
-  border: 1px solid rgba(9, 71, 183, 255);
-  box-shadow: 2px 2px 10px rgba(9, 71, 183, 255);
-  color: rgb(240, 240, 240);
   background-color: rgba(10, 83, 219, 255);
   transition: 0.4s;
 }
@@ -265,12 +295,15 @@ header a:hover {
   width: 50%;
 }
 
-/* Sección de sedes */
+/* Fin CSS para sección de servicios */
+
+/* Inicio CSS sección de sedes */
 
 #sedes {
   height: 100vh;
   display: flex;
   justify-content: center;
+  min-width: 300px;
 }
 
 #sedes .container {
@@ -308,7 +341,9 @@ header a:hover {
   border-radius: 5%;
 }
 
-/* Estilos para el pie de página */
+/* Fin CSS sección de sedes */
+
+/* Inicio CSS footer */
 
 .footer {
   margin-top: 30px;
@@ -330,6 +365,296 @@ header a:hover {
   font-size: 30px;
   margin: 0 5px;
 }
+
+/* Fin CSS footer */
+
+/* Inicio CSS de pagina de contacto */
+
+#telefonos {
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#telefonos .container {
+  min-width: 300px;
+}
+
+#telefonos h2 {
+  font-size: 3vh;
+}
+#telefonos h3,
+#correos h3 {
+  font-size: 2.5vh;
+  margin: 20px 0 10px 0;
+}
+
+#numeroSede {
+  border-radius: 15px;
+  border: 0;
+  color: rgb(240, 240, 240);
+  background-color: rgb(9, 71, 182);
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(19, 17, 126, 0.5);
+}
+
+#numeroSede:hover {
+  border-radius: 10px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(14, 90, 219);
+  width: 280px;
+  height: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+@media (min-width: 768px) {
+  #telefonos h2 {
+    font-size: 7vh;
+  }
+  #telefonos h3 {
+    font-size: 5.5vh;
+  }
+}
+
+/*Fin CSS de pagina de contacto */
+
+/* Inicio CSS pagina de PQRS */
+
+#formulario {
+  font-family: "Mukta", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 500px;
+  min-width: 300px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+.titulo-contacto {
+  font-size: 3vh;
+  text-align: center;
+}
+
+label {
+  color: rgb(9, 71, 182);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: rgb(240, 240, 240);
+  border: 2px solid rgb(245, 245, 245);
+  color: black;
+  outline: none;
+  resize: none;
+}
+input::placeholder textarea::placeholder {
+  color: rgb(200, 200, 200);
+}
+
+.form-txt {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.form-txt a {
+  color: rgb(9, 71, 182);
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 16px;
+  color: rgb(240, 250, 240);
+  background-color: rgb(9, 71, 182);
+  border: 0;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(19, 17, 126, 0.5);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(28, 92, 211);
+  transition: 0.4s;
+}
+
+@media (max-width: 991px) {
+  #formulario {
+    padding: 30px;
+  }
+  form {
+    padding: 50px 30px;
+    width: 100%;
+  }
+
+  input {
+    padding: 15px;
+  }
+}
+/*Fin CSS pagina de PQRS */
+
+/*Inicio CSS pagina de nosotros */
+
+#body-nosotros {
+  min-height: 100vh;
+  font-family: "Mukta", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.recuadro-nosotros {
+  width: auto;
+  min-width: 300px;
+  padding: 20px 35px;
+  margin: 40px 50px;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.recuadro-nosotros .h1-nosotros {
+  text-align: center;
+  font-size: 30px;
+}
+
+.h2-nosotros {
+  text-align: center;
+  font-size: 24px;
+}
+.p-nosotros {
+  font-size: 16px;
+  text-align: left;
+  text-overflow: none;
+}
+.listados-nosotros {
+  margin-left: 30px;
+  list-style-type: disc;
+}
+.listados-nosotros li {
+  font-size: 16px;
+  text-align: left;
+}
+/*Fin CSS pagina de nosotros */
+
+/*Inicio CSS pagina politica de privacidad */
+#body-politica {
+  min-height: 100vh;
+  font-family: "Mukta", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.recuadro-politica {
+  width: auto;
+  min-width: 300px;
+  padding: 20px 35px;
+  margin: 50px;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.recuadro-politica .h1-politica {
+  text-align: center;
+  font-size: 24px;
+}
+.h1-politica {
+  text-align: left;
+  font-size: 24px;
+}
+.p-politica {
+  font-size: 16px;
+  text-align: left;
+  text-overflow: none;
+}
+.listados-politica {
+  margin-left: 30px;
+  list-style-type: disc;
+}
+.listados-politica li {
+  font-size: 16px;
+  text-align: left;
+  font-style: italic;
+}
+
+/*Fin CSS pagina politica de privacidad */
+
+/*Inicio CSS pagina terminos y condiciones*/
+
+#body-terminos {
+  min-height: 100vh;
+  font-family: "Mukta", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.recuadro-terminos {
+  width: auto;
+  min-width: 300px;
+  padding: 20px 35px;
+  margin: 50px;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.recuadro-terminos .h1-terminos {
+  text-align: center;
+  font-size: 30px;
+}
+
+.h2-terminos {
+  text-align: left;
+  font-size: 24px;
+}
+.p-terminos {
+  font-size: 16px;
+  text-align: left;
+  text-overflow: none;
+}
+
+/*Fin CSS pagina terminos y condiciones*/
 
 /* Media queries para diferentes tamaños de pantalla */
 
@@ -366,11 +691,6 @@ header a:hover {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 2.2vh;
-  }
-
-  /* Contenedor general */
-  .container {
-    width: auto;
   }
 
   /* Imágenes */
@@ -440,10 +760,6 @@ header a:hover {
     margin: 0px 0px 30px 0px;
     font-size: 4vh;
   }
-  /* Contenedor general */
-  .container {
-    width: auto;
-  }
 
   /* Imágenes */
   .image-container img {
@@ -462,109 +778,4 @@ header a:hover {
   .cartaservicio {
     font-size: 2vh;
   }
-
-  /* Estilos para contenedor en encabezado */
-  header .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  /* Estilos para logo en encabezado */
-  header .logo img {
-    margin: auto;
-  }
-
-  /* Estilos para subtítulo en encabezado */
-  header h3 {
-    font-size: 3vh;
-    margin-bottom: 50px;
-  }
-
-  /* Estilos para menú de navegación en encabezado */
-  header nav {
-    padding-bottom: 0px;
-  }
-
-  /* Estilos para enlaces en menú de navegación en encabezado */
-  header a {
-    padding: 0px 20px;
-  }
 }
-
-/* CSS de pagina de contacto */
-
-#telefonos,
-#correos {
-  text-align: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-#telefonos h2,
-#correos h2 {
-  font-size: 3vh;
-}
-#telefonos h3,
-#correos h3 {
-  font-size: 2.5vh;
-}
-
-/*Estilos de botones */
-.telefonos_sedes .acordeon {
-  font-size: 1em;
-  width: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 0px;
-  padding: 10px 20px;
-  border: 1px solid rgba(9, 71, 183, 255);
-  box-shadow: 2px 2px 10px rgba(9, 71, 183, 255);
-  color: rgb(240, 240, 240);
-  background-color: rgba(9, 71, 183, 255);
-  transition: 0.4s;
-}
-.telefonos_sedes .acordeon:hover {
-  font-size: 1em;
-  width: 60%;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: 1px solid rgba(9, 71, 183, 255);
-  box-shadow: 2px 2px 10px rgba(9, 71, 183, 255);
-  color: rgb(240, 240, 240);
-  background-color: rgba(10, 83, 219, 255);
-  transition: 0.4s;
-}
-
-.container_correos .acordeon {
-  font-size: 1em;
-  width: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 0px;
-  padding: 10px 20px;
-  border: 1px solid rgba(9, 71, 183, 255);
-  box-shadow: 2px 2px 10px rgba(9, 71, 183, 255);
-  color: rgb(240, 240, 240);
-  background-color: rgba(9, 71, 183, 255);
-  transition: 0.4s;
-}
-
-.container_correos .acordeon:hover {
-  font-size: 1em;
-  width: 60%;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: 1px solid rgba(9, 71, 183, 255);
-  box-shadow: 2px 2px 10px rgba(9, 71, 183, 255);
-  color: rgb(240, 240, 240);
-  background-color: rgba(10, 83, 219, 255);
-  transition: 0.4s;
-}
-
-/*Fin estilos de botones*/
-
-/*Fin CSS de pagina de contacto */
