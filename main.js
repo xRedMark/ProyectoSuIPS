@@ -18,3 +18,26 @@ for (let i = 0; i < elementosAcordeon.length; i++) {
     this.classList.toggle("active");
   });
 }
+
+let elementosacordeonTransparencia = document.getElementsByClassName(
+  "acordeonTransparencia"
+);
+
+for (let i = 0; i < elementosacordeonTransparencia.length; i++) {
+  elementosacordeonTransparencia[i].addEventListener("click", function () {
+    // Obtener todos los paneles
+    let paneles = document.querySelectorAll(".panel");
+
+    // Ocultar todos los paneles
+    for (let j = 0; j < paneles.length; j++) {
+      paneles[j].style.display = "none";
+    }
+
+    // Mostrar el panel correspondiente al elemento actual
+    let panel = this.nextElementSibling;
+    panel.style.display = "block";
+    panel.classList.add("fade-in");
+    // Alternar la clase "active" para el elemento actual
+    this.classList.toggle("active");
+  });
+}

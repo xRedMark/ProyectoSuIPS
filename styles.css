@@ -265,7 +265,7 @@ header a:hover {
 }
 .acordeon:hover {
   width: 60%;
-  border-radius: 15px;
+  border-radius: 25px;
   background-color: rgba(10, 83, 219, 255);
   transition: 0.4s;
 }
@@ -566,6 +566,85 @@ input::placeholder textarea::placeholder {
   font-size: 16px;
   text-align: left;
 }
+
+/*Inicio CSS para Transparencia*/
+#transparencia .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2,
+h4 {
+  text-align: center;
+}
+
+.informacion-empresa {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nested-grid-left,
+.nested-grid-right {
+  flex: 1;
+}
+
+details {
+  width: 65vh;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  overflow: hidden;
+}
+
+details[open] {
+  max-height: 500px; /* Adjust based on your content height */
+  padding: 5px;
+}
+
+details:not([open]) {
+  max-height: 80px; /* Adjust based on your summary height */
+  padding: 0;
+}
+
+summary {
+  font-weight: bold;
+  background-color: rgb(9, 71, 182);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  list-style: none;
+  border-radius: 25px;
+}
+summary:hover {
+  background-color: rgb(28, 92, 211);
+  transition: 0.5s;
+}
+
+.informacion-adjunta {
+  border-radius: 25px;
+  padding: 10px;
+  border: 1px solid rgb(28, 92, 211);
+}
+
+.informacion-adjunta a {
+  font-family: "Mukta", sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(9, 71, 182);
+}
+.informacion-adjunta a:hover {
+  color: rgb(28, 92, 211);
+  transition: 0.5s;
+}
+.informacion-adjunta i {
+  font-size: 17px;
+}
+
+/*Fin CSS para Transparencia*/
+
 /*Fin CSS pagina de nosotros */
 
 /*Inicio CSS pagina politica de privacidad */
